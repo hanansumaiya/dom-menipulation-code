@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Unordered list item</h1>
+    <ul id="unlist">
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+    <!-- ///////////////////// -->
+    <section id="blogsarticle">
+      <article class="articleblog">
+        <h2>Blog 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
+          aliquid dolorem odio. Minima, pariatur nobis.
+        </p>
+      </article>
+      <article class="articleblog">
+        <h2>Blog 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
+          aliquid dolorem odio. Minima, pariatur nobis.
+        </p>
+      </article>
+    </section>
+
+    <!-- //////////////-----------------------------------------///////////// -->
+    <script>
+      let ul = document.getElementById("unlist");
+      let li = document.createElement("li");
+      li.innerText = "List item 4";
+      ul.appendChild(li);
+
+      /////////////////////
+      let article = document.createElement("article");
+      article.classList.add("articleblog");
+      let h2 = document.createElement("h2");
+      h2.innerText = "Blog 3 by JS";
+      let p = document.createElement("p");
+      p.innerText =
+        "adipisicing elit. Corruptialiquid dolorem odio. Minima, pariatur nobis";
+      article.appendChild(h2);
+      article.appendChild(p);
+      let section = document.getElementById("blogsarticle");
+      section.appendChild(article);
+      /////////////////////
+      /////////////////////
+      let articles = document.getElementsByClassName("articleblog");
+      for (let artticlee of articles) {
+        artticlee.style.color = "blue";
+        artticlee.style.border = "3px solid tomato";
+        artticlee.style.margin = "5px";
+        artticlee.style.padding = "10px";
+        artticlee.style.borderRadius = "10px";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <p>
+  একটা পুরুষ যতটা মা ভক্ত /বোনের ভক্ত থাকে। ততটা স্ত্রীভক্ত থাকত হয়তো বা
+  ৮০℅ সংসার বেঁচে যেত.
+</p> -->

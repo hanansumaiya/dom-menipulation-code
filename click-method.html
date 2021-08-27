@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="click-method-p"></p>
+    <button onclick="clickMethod()">Click Method</button>
+    <button id="daelestener">Direct add event listener</button>
+    <br />
+    <br />
+    <input id="inputfield" type="text" />
+    <button id="submitfield">submit</button>
+    <!-- ------------------- -->
+    <section>
+      <div id="cmntarea">
+        <h3>Add Comment by JS</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          necessitatibus similique, quisquam exercitationem culpa magni cumque a
+          beatae omnis minus.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          necessitatibus similique, quisquam exercitationem culpa magni cumque a
+          beatae omnis minus.
+        </p>
+      </div>
+      <div>
+        <textarea id="commentbox" cols="80" rows="10"></textarea>
+        <br />
+        <button id="subbtn">Submit</button>
+      </div>
+    </section>
+    <!-- ------------------- -->
+    <script src="js/clickmethod.js"></script>
+    <script>
+      //////
+      document.getElementById("subbtn").addEventListener("click", function () {
+        const commentBox = document.getElementById("commentbox");
+        /////
+        const commentBoxPara = document.createElement("paragraph");
+        commentBoxPara.innerText = commentBox.value;
+        //////
+        const mainContainer = document.getElementById("cmntarea");
+        mainContainer.appendChild(commentBoxPara);
+        ////
+        commentBox.value = "";
+      });
+    </script>
+  </body>
+</html>

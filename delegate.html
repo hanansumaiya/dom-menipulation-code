@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delegate</title>
+  </head>
+  <body>
+    <h1>Event Delegate</h1>
+    <section id="sec">
+      <ul id="un-list">
+        <li class="item">Lorem ipsum0</li>
+        <li class="item">Lorem ipsum 1</li>
+        <li class="item">Lorem ipsum 2</li>
+        <li class="item">Lorem ipsum 3</li>
+        <li class="item">Lorem ipsum 4</li>
+      </ul>
+      <button id="add-item">ADD</button>
+    </section>
+    <script>
+      //   const items = document.getElementsByClassName("item");
+      //   for (const item of items) {
+      //     console.log(item);
+      //     item.addEventListener("click", function () {
+      //       document.getElementById("un-list").removeChild(item);
+      //     });
+      //   }
+      ///////////////////// same r akta rules e
+      //   const items = document.getElementsByClassName("item");
+      //   for (const item of items) {
+      //     item.addEventListener("click", function (event) {
+      //       event.target.parentNode.removeChild(event.target);
+      //     });
+      //   }
+      //////////
+      document
+        .getElementById("add-item")
+        .addEventListener("click", function () {
+          const li = document.createElement("li");
+          li.innerText = "Add New Item";
+          li.classList.add("item");
+          const ul = document.getElementById("un-list");
+          ul.appendChild(li);
+        });
+      /////
+      document
+        .getElementById("un-list")
+        .addEventListener("click", function (arif) {
+          arif.target.parentNode.removeChild(arif.target);
+        });
+    </script>
+  </body>
+</html>

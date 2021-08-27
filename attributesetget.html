@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Delete Button .</h1>
+      <p>
+        akta button e click kore kivabe kono attribute remove kora jai seita
+        dekhaho hoice..... abr kivabe attribute set kora jai tao ace.
+      </p>
+      <h2 id="secret-heading">THIS HEADING IS SECRET</h2>
+      <input id="dlt-input" type="text" placeholder="please write 'delete'" />
+      <button id="dlt-btn" disabled>DELETE</button>
+    </div>
+    <!-- ---------------------------------------------------- -->
+
+    <script>
+      //////////
+      document.getElementById("dlt-btn").addEventListener("click", function () {
+        document.getElementById("secret-heading").style.display = "none";
+      });
+
+      document
+        .getElementById("dlt-input")
+        .addEventListener("keyup", function (event) {
+          const sumaiya = document.getElementById("dlt-btn");
+          if (event.target.value == "delete") {
+            sumaiya.removeAttribute("disabled");
+          } else {
+            sumaiya.setAttribute("disabled", true);
+          }
+        });
+      ////////focus
+      // document
+      //   .getElementById("dlt-input")
+      //   .addEventListener("focus", function () {
+      //     document.body.style.backgroundColor = "lightblue";
+      //   });
+      // ////////blur
+      // document
+      //   .getElementById("dlt-input")
+      //   .addEventListener("blur", function () {
+      //     document.body.style.backgroundColor = "lightpink";
+      //   });
+      ////////KEY event ace 3ta
+      ////////--1 KEYdown
+      //   document
+      //     .getElementById("dlt-input")
+      //     .addEventListener("keydown", function () {
+      //       console.log("Sumaiy");
+      //     });
+      ////////--1 KEYPRESS
+      //   document
+      //     .getElementById("dlt-input")
+      //     .addEventListener("keypress", function () {
+      //       const dltInput = document.getElementById("dlt-input");
+      //       console.log(dltInput.value);
+      //     });
+      ////////--1 KEYUP
+      // document
+      //   .getElementById("dlt-input")
+      //   .addEventListener("keyup", function () {
+      //     const dltInput = document.getElementById("dlt-input");
+      //     console.log(dltInput.value);
+      //   });
+      //
+    </script>
+    <!-- ---------------------------------------------------- -->
+  </body>
+</html>
